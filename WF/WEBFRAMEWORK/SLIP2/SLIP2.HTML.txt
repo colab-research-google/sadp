@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slip 2 Employee Registration Details</title>
+        <script src="Slip2.js"></script>
+    </head>
+    <body>
+        <form>
+            Full Name: <input type="text" id="name"></input></br></br>
+            DOB <input type="text" id="dob"></input></br></br>
+            Joining Date <input type="text" id="jdate"></input></br></br>
+            Salary <input type="text" id="sal"></input></br></br>
+            <button type="submit" onclick="validateform()">Submit</button>
+        </form>
+    </body>
+</html>

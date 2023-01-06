@@ -1,0 +1,26 @@
+function validateForm(){
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var age = document.getElementById("age").value;
+    var reg = /^[a-zA-Z]+$/; //REGEX for only use of alphabets. 
+    //Without +$ it will match only the start position but with it will match the whole string/word
+        
+    //if Fields are empty
+    if(fname.length == 0 || lname.length == 0 || age.length == 0){
+        alert("All Fields are Mandatory");
+        return false;
+    }
+    //test will check boolean values. if fname/lname does not contain alphabets
+    else if(!reg.test(fname) || !reg.test(lname)){
+        alert("Only Alphabets Allowed");
+        return false;
+    }
+    else if(age < 18 || age > 50){
+        alert("Enter Age between 18 & 50 Only")
+        return false;
+    }
+    else{
+        alert("Validation Successfull")
+        return true;
+    }
+}

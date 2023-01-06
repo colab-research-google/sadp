@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slip 1 Name and Age Validation</title>
+        <script src="Slip1.js"></script>
+    </head>
+    <body>
+        <form>
+            First Name: <input type="text" id="fname"></input></br></br>
+            Last Name: <input type="text" id="lname"></input></br></br>
+            Age: <input type="text" id="age"></input></br></br>
+            <button type="submit" onclick="validateForm()">Submit</button>
+        </form>
+    </body>
+</html>

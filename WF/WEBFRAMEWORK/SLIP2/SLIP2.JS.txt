@@ -1,0 +1,35 @@
+function validateform(){
+    var name = document.getElementById("name").value;
+    var dob = document.getElementById("dob").value;
+    var jdate = document.getElementById("jdate").value;
+    var sal = document.getElementById("sal").value;
+    var regName = /^[a-zA-Z0-9]+\s[a-zA-Z0-9]+$/; //REGEX for Full Name
+    var regdate = /[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/; // DD/MM/YYYY. '/' before '\' is used to treat '\' is as symbol and not as escape character
+    var regsal = /[0-9]/;
+        
+    //if Fields are empty
+    if(name.length == 0 || dob.length == 0 || jdate.length == "" || sal.length == 0){
+        alert("All Fields are Mandatory");
+        return false;
+    }
+    else if(!regName.test(name)){
+        alert("Enter Name Format Correctly \"First Name Last Name\"");
+        return false;
+    }
+    else if(!regdate.test(dob)){
+        alert("Registration Date Format DD/MM/YYYY");
+        return false;
+    }
+    else if(!regdate.test(jdate)){
+        alert("Date of Joining Format DD/MM/YYYY");
+        return false;
+    }
+    else if(!regsal.test(sal)){
+        alert("Enter Numerical Values only in Salary");
+        return false;
+    }
+    else{
+        alert("Validation Successfull")
+        return true;
+    }
+}

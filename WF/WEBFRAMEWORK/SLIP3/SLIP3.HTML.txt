@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slip 3 Email Validation</title>
+        <script src="Slip3.js"></script>
+    </head>
+    <body>
+        <form>
+            Email: <input type="text" id="email"></input></br></br>
+            Password: <input type="password" id="pass"></input></br></br>
+            <button type="submit" onclick="validateform()">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+var fs = require('fs');
+var path = require('path')
+var data = fs.readFileSync("Sample1.txt","utf8");
+fs.appendFile("Sample2.txt", data,(err) =>{
+    if(err) {
+        console.log(err);
+    }
+    else{
+        console.log("File Content after appending: ",fs.readFileSync("Sample2.txt","utf8"));
+    }
+});
